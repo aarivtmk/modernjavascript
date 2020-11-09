@@ -68,5 +68,34 @@ datatypes in js :
 // console.log(window.n);
 // console.log(window);
 
+//  strings
+let ab = 'xyz';
+console.log(ab[1]);
+console.log(ab.charAt(1));
+let A = 5;
+// using js template literal
+// lines breaks allowed in template literal
 
+console.log(`the answer is ${A+1}`);
+console.log(`the answer is 
+
+${A+1}`);
+
+console.log('the answer is '+
+A);
+console.log('the answer is \n'+
+A);
+
+console.log('this is steve \'s phone');
+console.log('this is steve \\ phone');
+
+// comparing strings
+let a = 'z';
+let b = 'y';
+if (a < b)
+console.log("a is less than b");
+else if (a > b)
+console.log("b is less than a");
+else
+console.log("a is equal to b");
 

@@ -11,4 +11,6 @@
 
 // // Note : use constants as often as possible to be clear from the beginning of your project
 
-let curren
+let currentResult = 0;
+currentResult = 12 + currentResult;
+outputResult(currentResult,"")
