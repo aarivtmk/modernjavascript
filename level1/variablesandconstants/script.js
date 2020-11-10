@@ -99,3 +99,35 @@ console.log("b is less than a");
 else
 console.log("a is equal to b");
 
+// functions
+// 1. define function
+// 2. call function
+let defaultResult = 0;
+let currentResult = defaultResult;
+
+function addition(n1,n2){
+    return n1+n2;
+}
+
+// console.log(result); you cannot access local variables outside of the function
+// num1 and num2 are only available in function not outside 
+// you can write functions anywhere js will pull it to the top before execution
+currentResult = addition(6,2);
+outputResult(currentResult,99)
+
+
+// scope
+// global variable
+// local variable
+
+let userName = 'a';
+function greetUser(name) {
+  let userName = name;
+  alert(userName);
+}
+userName = 'b';
+greetUser('a');
+
+// return in detail
+// return; exit function
+// having a second return statement makes no sense
