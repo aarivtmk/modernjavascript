@@ -13,9 +13,9 @@
 let defaultResult = 0;
 let currentResult = defaultResult;
 
-function addition(n1,n2){
-    return n1+n2;
-}
+// function addition(n1,n2){
+//     return n1+n2;
+// }
 // alert(typeof(addition))
 
 // console.log(result); you cannot access local variables outside of the function
@@ -26,5 +26,12 @@ function addition(n1,n2){
 
 // addBtn.addEventListener('click',add(1,2)) not the right cuz, unless someone clicks on the button , we should not call the function
 
+
+function addition(){
+    currentResult = currentResult + userInput.value
+    outputResult(currentResult,'')
+
+}
 addBtn.addEventListener('click',addition) // so here add is the address of the functon, means we are giving what to call when someone clicks on the button just like your calling bell and delivery guy
-outputResult(currentResult,99)
+
+
