@@ -1,0 +1,43 @@
+the goal of asynchronous JavaScript is basically to deal with long-running tasks, that basically run in the background.
+
+And the most common use case of asynchronous JavaScript is to fetch data from remote servers,in so-called AJAX calls.
+
+Concepts : 
+Promises
+fetch function
+async
+await
+error handling
+
+
+ajax and api
+
+SYNCHORNOUS CODE : THE CODE WILL BE EXECUTED LINE BY LINE
+-> here each line of the code awaits
+previous line to finish
+
+-->long running operations block code execution
+
+EG : 
+const name = 'steve'
+const age = 22
+alert("hello how are you")
+console.log(name)
+
+here unless user clikcks ok button of alert dialogue, it wont execute 25th line.
+
+
+so this is where we use asynchronous code.
+const p = document.qs('.s')
+setTimeout(function(){
+    s.textCotent = 'hello world'f
+})
+
+=> asynchronous CODE is executed after a task that runs in the background  finishes
+==>asynchronous code is non blocking
+===>execution does not wait for an asynchronous task to finish its work
+
+Note : not all callback functins cannot make code alone asynchronous
+only few functions like setTimeout
+
+eventhough map is a callback functions, its not asynchronous

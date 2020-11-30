@@ -1,0 +1,150 @@
+https://reactjs.org/docs/create-a-new-react-app.html
+
+if npm version > 5, you will get npx
+it runs a command without installing 
+
+to install node : https://github.com/nvm-sh/nvm
+or https://nodejs.org/en/
+to run react online : https://codesandbox.io/s/new?file=/src/App.js
+
+extensions:
+rainbow brackets
+Reactjs code snippets by charalampos karypidis
+Snazzy Operator by aaronthomas
+vscode-styled-components by Julien Poissonnier
+Babel JavaScript by Michael McDermott
+
+
+
+src : application lives here
+public folder : older js and html
+so when we call build script, it will take the react code in src folder to convert into older version and then put that into public folder 
+
+test for test code
+eject take out all the configuration files which is hidden from us, 
+we use this incase you can to manage on your own.
+
+in production,
+if you give src to browser it wont know what we are doing 
+so we have to build it using npm build
+
+it optimizes the code
+
+
+Babel and webpack
+react code ----> Babel -----> js source code and makes sure that website working.
+
+webpack : modular bundling or compressing
+we use to write modular code
+
+
+build folder - deployment
+src - workplace
+
+package.json - component architecture
+
+
+by using a class component, we can access a state
+state is a js object we can access anytime in class
+
+how?
+constructor and super
+
+
+class Parent{
+    constructor(name,no){
+        this.name = name;
+        this.no = no;
+    }
+}
+
+class Child extends Parent {
+    constructor(){
+        super(name,no) // adopting properties from Parent
+    }
+}
+
+second method:
+
+class Child extends Parent {
+    constructor(n,a){
+        super() // adopting properties from Parent
+        this.name = n; // manipulating data
+        this.no = a;
+    }
+}
+
+
+class is html attribute and also js keyword
+so inroder to differentiate, we use keyword className and we call this 
+as JSX which is combination of javascript and html
+
+NOTE: using {} is mandatory whereever you write a js expression
+eg: <p>{this.state.name}</p>
+
+
+setState : we cannot change the state object directly like
+this.state.name = 'aariv'
+
+REASON: unidirectional dataflow
+
+so when click happens  state gets notified and setstate changes the state. once it is done, react re renders the component again.
+
+so as soon as the state change, we re render the component again
+
+
+Dynamic Component
+
+
+index.js:1 Warning: Each child in a list should have a unique "key" prop.
+
+so whenever you create a state, make sure that you are assigining a unique key or id
+
+and then assign it to the jsx element
+
+  this.state = {
+      students: [
+        {
+          name:'steve',
+          id: 'asc1',
+        },
+        {
+          name:'Bill',
+          id: 'asc2',
+        },
+        {
+          name:'tim cook',
+          id: 'asc3',
+        },
+        {
+          name:'Elon Musk',
+          id: 'asc4',
+        },
+
+      ]
+    };
+
+
+
+why:
+so that rreact iwll change only one element incase of change and no 
+need to re render whole object now.
+
+if only one element needs to change, react is smart enought to render only one element instead of whole object and thus it increase then performance of the site.
+
+component lifecycle
+Single page application : same page, different content
+index.html = a small html page
+js = inject js into the root element of the index html page
+
+so in spa, instead of reqesting page, it request data to the server
+
+Eg: API calling
+
+Life Cycle methods : list of component methods.
+
+methods that are called automatically by react at different stages of when this component gets rendered
+
+componentDidMount : when this method calls, it puts component on the page and renders the dom for the first time
+
+https://jsonplaceholder.typicode.com/users : 10 user details JSON
